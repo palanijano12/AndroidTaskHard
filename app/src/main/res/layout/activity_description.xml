@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/descFoodImageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/color_placeholder"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/descFoodNameView"
+        style="@style/TextViewStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/foodItem_startEnd_margin"
+        android:layout_marginLeft="@dimen/foodItem_startEnd_margin"
+        android:layout_marginTop="@dimen/foodItem_startEnd_margin"
+        android:gravity="start"
+        android:textAlignment="viewStart"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/descFoodImageView" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/descFoodPriceView"
+        style="@style/TextViewStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:textAlignment="viewStart"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/descFoodNameView"
+        app:layout_constraintTop_toBottomOf="@id/descFoodNameView" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/descFoodRatingView"
+        style="@style/TextViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/foodItem_startEnd_margin"
+        android:layout_marginRight="@dimen/foodItem_startEnd_margin"
+        android:gravity="start"
+        android:paddingStart="0dp"
+        android:paddingLeft="0dp"
+        android:paddingEnd="2dp"
+        android:paddingRight="2dp"
+        android:textAlignment="viewStart"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/descFoodNameView" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/descFoodRatingIcon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@id/descFoodRatingView"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@id/descFoodRatingView"
+        app:layout_constraintTop_toTopOf="@id/descFoodRatingView"
+        app:layout_constraintWidth_percent="0.045"
+        app:srcCompat="@drawable/rating_icon" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/buttonContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/foodItem_startEnd_margin"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/descFoodPriceView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/descFoodAddButton"
+                style="@style/AppButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/add_to_cart"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/descFoodMinusButton"
+            style="@style/AppButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/foodItem_join_margin"
+            android:layout_marginLeft="@dimen/foodItem_join_margin"
+            android:gravity="center"
+            android:text="@string/remove"
+            app:iconGravity="textStart" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/descFoodItemCount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|top"
+        android:layout_margin="@dimen/foodCard_InnerMargin"
+        android:background="@drawable/counter_badge_background_button"
+        android:gravity="center"
+        android:padding="4dp"
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintBottom_toBottomOf="@id/buttonContainer"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/buttonContainer" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="foodItem_startEnd_margin">16dp</dimen>
+    <dimen name="foodItem_Card_VerticalMargin">4dp</dimen>
+    <dimen name="foodItem_Card_HorizontalMargin">8dp</dimen>
+    <dimen name="foodItem_join_margin">8dp</dimen>
+    <dimen name="foodCard_InnerMargin">4dp</dimen>
+    <dimen name="nav_item_margin">16dp</dimen>
+</resources>

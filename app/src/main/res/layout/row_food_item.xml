@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/footRootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/foodCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/foodItem_Card_HorizontalMargin"
+        android:layout_marginLeft="@dimen/foodItem_Card_HorizontalMargin"
+        android:layout_marginTop="@dimen/foodItem_Card_VerticalMargin"
+        android:layout_marginEnd="@dimen/foodItem_Card_HorizontalMargin"
+        android:layout_marginRight="@dimen/foodItem_Card_HorizontalMargin"
+        android:layout_marginBottom="8dp"
+        android:tag="0"
+        app:cardBackgroundColor="@color/colorWhite"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="2dp"
+        app:cardMaxElevation="0dp"
+        app:cardUseCompatPadding="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/foodLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/foodImageView"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/color_placeholder"
+                android:scaleType="fitXY"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/foodNameView"
+                style="@style/TextViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:gravity="start"
+                android:textAlignment="viewStart"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/foodRatingIcon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/foodImageView" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/foodRatingView"
+                style="@style/TextViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/foodCard_InnerMargin"
+                android:gravity="start"
+                android:paddingStart="0dp"
+                android:paddingLeft="0dp"
+                android:paddingEnd="2dp"
+                android:paddingRight="2dp"
+                android:textAlignment="viewStart"
+                android:textColor="#454545"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="@id/foodNameView"
+                app:layout_constraintEnd_toEndOf="@id/foodCartRowView"
+                app:layout_constraintTop_toTopOf="@id/foodNameView" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/foodPriceView"
+                style="@style/TextViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="4dp"
+                android:gravity="start"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/foodAddButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/foodNameView" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/foodRatingIcon"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toBottomOf="@id/foodRatingView"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toStartOf="@id/foodRatingView"
+                app:layout_constraintTop_toTopOf="@id/foodRatingView"
+                app:layout_constraintWidth_percent="0.045"
+                app:srcCompat="@drawable/rating_icon" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/foodCartRowView"
+                style="@style/TextViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:layout_marginRight="4dp"
+                android:background="@drawable/add_button_background"
+                android:gravity="start"
+                android:paddingStart="30dp"
+                android:paddingLeft="30dp"
+                android:paddingTop="3dp"
+                android:paddingEnd="30dp"
+                android:paddingRight="30dp"
+                android:paddingBottom="3dp"
+                android:text="@string/add"
+                android:textAlignment="viewStart"
+                android:textAllCaps="true"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="@id/foodPriceView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/foodPriceView" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/foodAddButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/add_icon_coloured"
+                app:layout_constraintBottom_toBottomOf="@id/foodCartRowView"
+                app:layout_constraintStart_toStartOf="@id/foodCartRowView"
+                app:layout_constraintTop_toTopOf="@id/foodCartRowView" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/foodMinusButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/minus_icon_coloured"
+                app:layout_constraintBottom_toBottomOf="@id/foodCartRowView"
+                app:layout_constraintEnd_toEndOf="@id/foodCartRowView"
+                app:layout_constraintTop_toTopOf="@id/foodCartRowView" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

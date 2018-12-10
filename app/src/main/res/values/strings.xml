@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">AndroidTaskHard</string>
+    <string name="rupee_value">₹</string>
+    <string name="cart">cart</string>
+    <string name="filter">Filter</string>
+    <string name="price_low_to_high">Price Low to High</string>
+    <string name="rating">Rating</string>
+    <string name="add">Add</string>
+    <string name="remove">Remove</string>
+    <string name="add_to_cart">Add to Cart &#160; &#160; &#160; &#160; </string>
+    <string name="proceed_to_pay">Proceed To pay</string>
+    <string name="apply">Apply</string>
+    <string name="coupon_code">Coupon Code</string>
+    <string name="total">Total</string>
+    <string name="delivery_charge_rs_30">Delivery Charge <b>₹30</b></string>
+</resources>

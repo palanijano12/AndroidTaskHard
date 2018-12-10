@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/navFoodFilter"
+        android:icon="@drawable/filter_icon"
+        android:title="@string/filter"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/navFoodCart"
+        android:title="@string/cart"
+        app:actionLayout="@layout/cart_item_layout"
+        app:showAsAction="ifRoom" />
+</menu>
